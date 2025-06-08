@@ -1,8 +1,56 @@
 HTTPS URL: https://nextgenmma.duckdns.org
 SSL Certificate: Let's Encrypt via Certbot
-
+------------------------------------------------------------------------------------------------------------------------------------------
 Domain & SSL Setup Guide
+This guide explains how to set up your domain and secure it with SSL for this project.
 
+Set Up a Free Domain Using DuckDNS
+
+- Go to https://www.duckdns.org
+- Sign in with your preferred method (GitHub, Google, etc.).
+- Choose a subdomain name (e.g., yourname.duckdns.org).
+- Add your IP address and click Add Domain.
+- Follow the instructions on the DuckDNS page to:
+  * Set up your duck.sh script.
+  * Enable cron or systemd to update your IP regularly.
+
+DuckDNS automatically updates your IP address if it changes (important for dynamic IPs).
+------------------------------------------------------------------------------------------------------------------------------------------
+Certbot Setup:
+
+Step 1: First Test Your Domain Works
+
+curl http://nextgenmma.duckdns.org
+
+Step 2: Install Certbot (from your home directory)
+
+# Go back to home directory
+cd ~
+
+# Update system
+sudo apt update
+
+# Install snapd and certbot
+sudo apt install snapd -y
+sudo snap install --classic certbot
+
+# Create a symlink so certbot command works
+sudo ln -s /snap/bin/certbot /usr/bin/certbot
+
+Step 3: Get SSL Certificate
+
+sudo certbot --apache -d nextgenmma.duckdns.org
+
+# Follow the prompts:
+# - Enter your email address
+# - Agree to terms (type 'Y')
+# - Choose whether to share email with EFF (Y or N)
+# - It should automatically configure Apache
+
+Step 4: Test HTTPS
+
+After Certbot finishes, try accessing:
+https://nextgenmma.duckdns.org 
 
 
 
