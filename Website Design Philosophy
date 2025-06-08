@@ -1,0 +1,36 @@
+Website Design Philosophy
+
+- User-Centric
+- Maintainable
+- Scalable
+- Responsive
+
+The semantic HTML layout was structured with accessibility and clarity in mind. Sections are marked with proper <section>, <header>, <footer>, 
+and <nav> elements to enhance readability, improve SEO, and ensure compatibility with screen readers. 
+
+The design follows a sleek, dark-themed aesthetic suited for combat sports branding.
+
+Key styling choices:
+
+- Dark Background with Accent Highlights:
+  * A gradient dark theme is used to reflect the high-energy, gritty nature of MMA.
+  * Orange highlights (#ff6b35) establish brand identity and guide user focus (e.g., section headers, fighter names, borders).
+
+- Glassmorphism & Soft Neomorphism:
+  * box-shadow, linear-gradient, and border-radius are used to create modern, depth-rich fighter cards.
+  * Fighter cards and fight listings subtly elevate on hover, reinforcing interactivity.
+
+- Responsive Design:
+  * Components like fighters-grid switch from multi-column to single-column on smaller viewports, improving readability.
+
+- Sticky Header:
+  *The header remains in view on scroll (position: sticky) for constant access to navigation.
+
+Two arrays (sampleFighters[], sampleFights[]) were created to store fighter and event data.
+
+Accessibility & Performance
+- Uses system-default font stacks ('Arial', sans-serif) for fast loading.
+- High contrast color scheme supports readability.
+
+
+
