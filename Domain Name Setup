@@ -52,6 +52,11 @@ Step 4: Test HTTPS
 After Certbot finishes, try accessing:
 https://nextgenmma.duckdns.org 
 
+Step 5: Set Up Auto-Renewal
+
+sudo certbot renew --dry-run
+
+
 
 
 
